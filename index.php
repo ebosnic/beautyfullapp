@@ -15,4 +15,3 @@
 	echo "Page you are looking for does not exist! TakeCare! ";
 	}
 ?> 
-#bye
