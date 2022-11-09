@@ -22,5 +22,4 @@
 ?>
 
 for href use 
-<a href="?page=homepage"
-<a href="?page=dh">home</a>
+<a href="?page=homepage">home</a>
