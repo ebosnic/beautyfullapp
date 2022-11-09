@@ -1,17 +1,22 @@
-<?php
-	$directory = 'pages/lang';
+   <?php include 'pages/header.php' ?>
+    <?php
+	$directory = 'pages';
 	$whitelist = array_map(function ($file) use ($directory) {
+
 	return "$directory/$file";
 	}, array_diff(scandir($directory), array('..', '.')));
 	if(!isset($_GET['page'])) {
-	$page = "pages/lang/landing";
+	$page = "homepage";
 	} else {
-	$page = $_GET['page'];
+	$route=explode("?", $_GET['page']);
+	$page = $route[0];
+	//echo $page;
 	}
-	$file = $page.".php";
+	$file = "$directory/$page".".php";
+	//echo $file;
 	if(in_array($file, $whitelist) && file_exists($file)){
 	include($file);
 	} else {
-	echo "Page you are looking for does not exist! TakeCare! ";
+        include('pages/404.php');
 	}
-?> 
+?>
