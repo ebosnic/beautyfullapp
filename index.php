@@ -20,3 +20,7 @@
         include('pages/404.php');
 	}
 ?>
+
+for href use 
+<a href="?page=homepage"
+<a href="?page=dh">home</a>
